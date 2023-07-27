@@ -12,8 +12,22 @@ function pedirComida(array) {
   // pedirComida([{nombre: "Harry", dieta: "standard"}, {nombre: "Luna", dieta: 'vegan'}, {nombre: "Goyle", dieta: "standard"}])
   // retorna {standard: 2, vegan: 1}
   // Tu código aca:
+  const resultado = {
+    standard: 0,
+    vegan: 0,
+  };
 
+  for(const usuario of array) {
+    if (usuario.dieta === 'standard') {
+      resultado.standard++;
+    } else if (usuario.dieta === 'vegan') {
+      resultado.vegan++;
+    }
+  }
+  return resultado;
 }
+
+
 
 // No modifiques nada debajo de esta linea //
 
