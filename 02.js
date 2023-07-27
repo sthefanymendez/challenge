@@ -25,7 +25,15 @@ function cuantosMenores(invitados) {
   // };
   // cuantosMenores(invitados) devuelve 2
   // Tu código aca:
+  let cantidadMenores = 0;
 
+  for (const persona in invitados) {
+    if (invitados.hasOwnProperty(persona) && invitados[persona].edad < 18) {
+      cantidadMenores++;
+    }
+  }
+  return cantidadMenores;
+  
 }
 
 
